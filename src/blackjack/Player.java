@@ -1,9 +1,11 @@
 package blackjack;
 
-public class Player {
+import common.Hand;
 
-	public Player() {
-		// TODO Auto-generated constructor stub
+public class Player extends Person {
+
+	public Player(String n, Hand h) {
+		super(n, h);
 	}
-
+	
 }
