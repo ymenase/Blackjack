@@ -9,6 +9,22 @@ public class Hand {
 	public Hand() {
 	}
 
+	public int getTotalOfHand(Hand hand) {
+		//iterate over hand to total cards
+		//this method works for player and dealer based off of the argument in the method call
+		int total = 0;
+		for (Card card : hand.getHand()) { //figure out total of hand
+			total = total + card.getValue(); 
+		} 
+		if (total > 21) { //see if total is over 21
+			hand.checkHand();
+		}
+		total = 0;
+		for (Card card : hand.getHand()) { //recalculate the total
+			total = total + card.getValue(); 
+		} 
+		return total;
+	}
 	public void addCardToHand(Card c) {
 		hand.add(c);
 	}
