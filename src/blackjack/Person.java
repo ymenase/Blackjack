@@ -5,6 +5,9 @@ public class Person {
 	private String name;
 	private Hand hand;
 	
+	public Person()
+	{
+	}
 	public Person(String n, Hand h){
 		setName(n);
 		setHand(h);

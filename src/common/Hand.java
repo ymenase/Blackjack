@@ -14,6 +14,7 @@ public class Hand {
 		//this method works for player and dealer based off of the argument in the method call
 		int total = 0;
 		for (Card card : hand.getHand()) { //figure out total of hand
+//			System.out.println("test " + card);
 			total = total + card.getValue(); 
 		} 
 		if (total > 21) { //see if total is over 21
@@ -21,6 +22,7 @@ public class Hand {
 		}
 		total = 0;
 		for (Card card : hand.getHand()) { //recalculate the total
+//			System.out.println("test " + card);
 			total = total + card.getValue(); 
 		} 
 		return total;

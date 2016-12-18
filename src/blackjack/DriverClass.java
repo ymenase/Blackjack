@@ -10,14 +10,16 @@ import common.Hand;
 public class DriverClass { // class bracket
 	static Scanner keyboard = new Scanner(System.in);
 	static Deck deck;
-	DriverClass dc1 = new DriverClass();
+//	DriverClass dc1 = new DriverClass();
 
 	public static void main(String[] args) {
-
-		start();
+		System.out.println("test");
+		Dealer dealer = new Dealer();
+		start(dealer);
 	} 
 
-	public static void start() {
+	public static void start(Dealer dealer) {
+		System.out.println("test");
 		Hand handD = new Hand(); // instantiate hand objects
 		Hand handP = new Hand();
 		Hand h = new Hand();
@@ -28,7 +30,7 @@ public class DriverClass { // class bracket
 		Player player = new Player(name, handP);
 		deck = new Deck();
 
-		ArrayList<Card> deckOfCards = (ArrayList<Card>) // create an ArrayList
+//		ArrayList<Card> deckOfCards = (ArrayList<Card>) // create an ArrayList
 														// that holds card
 		// objects
 		deck.getDeck();
@@ -51,14 +53,14 @@ public class DriverClass { // class bracket
 			System.out.println(c);
 		}
 		System.out.println("Player's total is " + h.getTotalOfHand(handP));
-		 dealer.dealingLogic(handD, handP, player);
+		 dealer.dealingLogic(handD, handP, player, h);
 	}
 
 	public static void restart() {
 		System.out.println("Would you like to play again? Y/N");
 		String answer = keyboard.next();
 		if (answer.equalsIgnoreCase("Y")) {
-			start();
+			start(new Dealer());
 		} else {
 			System.out.println("You have exited the game. Thanks for playing!");
 			System.exit(0);
