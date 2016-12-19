@@ -7,7 +7,6 @@ import common.Hand;
 
 public class Dealer extends Person {
 	Scanner keyboard = new Scanner(System.in);
-//	DriverClass dc = new DriverClass();
 	Deck d = new Deck();
 	public Dealer(){
 		
@@ -35,7 +34,6 @@ public class Dealer extends Person {
 				System.out.println(player.getName() + " busted! \u2639");
 				new DriverClass().restart();
 			}
-//			dealingLogic(dealerHand, playerHand, player); //testing area
 		}
 		else {			
 			System.out.println("Select 1 to hit or 2 to stay: ");

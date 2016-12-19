@@ -19,7 +19,6 @@ public class DriverClass { // class bracket
 	} 
 
 	public static void start(Dealer dealer) {
-		System.out.println("test");
 		Hand handD = new Hand(); // instantiate hand objects
 		Hand handP = new Hand();
 		Hand h = new Hand();
@@ -30,9 +29,7 @@ public class DriverClass { // class bracket
 		Player player = new Player(name, handP);
 		deck = new Deck();
 
-//		ArrayList<Card> deckOfCards = (ArrayList<Card>) // create an ArrayList
-														// that holds card
-		// objects
+
 		deck.getDeck();
 
 		handD.addCardToHand(deck.dealDeck()); // adding cards to hands by
